@@ -1,0 +1,19 @@
+{
+  "name": "react-electron-boilerplate",
+  "version": "1.0.0",
+  "description": "Minimalist boilerplate to make Electron's app ysing React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoniogamiz/react-electron-boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antoniogamiz/react-electron-boilerplate/issues"
+  },
+  "homepage": "https://github.com/antoniogamiz/react-electron-boilerplate#readme"
+}

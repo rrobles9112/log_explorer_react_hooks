@@ -1,11 +1,23 @@
 const { app, BrowserWindow } = require("electron");
+const url = require("url");
+const path = require("path");
 
 let mainWindow;
 
 function createWindow() {
   mainWindow = new BrowserWindow({ width: 800, height: 600 });
-  // React will use this port
-  mainWindow.loadURL("http://localhost:3000");
+
+  const startUrl =
+    process.env.ELECTRON_START_URL ||
+    url.format({
+      pathname: path.join(__dirname, "/../build/index.html"),
+      protocol: "file:",
+      slashes: true
+    });
+
+  console.log(process.env.ELECTRON_START_URL);
+
+  mainWindow.loadURL(startUrl);
   mainWindow.on("closed", function() {
     mainWindow = null;
   });
